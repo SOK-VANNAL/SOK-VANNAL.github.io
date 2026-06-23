@@ -7,7 +7,6 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  APP_PORT: 3000
 
 jobs:
   build-and-deploy:
@@ -59,7 +58,7 @@ jobs:
           GHCR_USER: ${{ github.actor }}
           IMAGE: ${{ steps.image.outputs.name }}:latest
           CONTAINER: vannal-sok-portfolio
-          APP_PORT: ${{ github.event.inputs.APP_PORT }}
+          APP_PORT: 3000
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
