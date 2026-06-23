@@ -57,7 +57,7 @@ jobs:
           GHCR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GHCR_USER: ${{ github.actor }}
           IMAGE: ${{ steps.image.outputs.name }}:latest
-          CONTAINER: ecommerce-${{ github.event.inputs.APP_SETTING_CONFIG_NAME }}
+          CONTAINER: vannal-sok-portfolio
           APP_PORT: ${{ github.event.inputs.APP_PORT }}
         with:
           host: ${{ secrets.SSH_HOST }}
