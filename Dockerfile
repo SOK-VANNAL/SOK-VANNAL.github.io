@@ -6,7 +6,8 @@ RUN rm -f /etc/nginx/conf.d/default.conf
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copy the static site
-COPY index.html styles.css script.js profile.jpg /usr/share/nginx/html/
+COPY index.html styles.css script.js profile.jpg kboun-khnat-logo.jpg /usr/share/nginx/html/
+COPY public/ /usr/share/nginx/html/public/
 
 EXPOSE 80
 
